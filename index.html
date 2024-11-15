@@ -182,20 +182,12 @@
           tabItems.forEach((item) => {
             item.style.flexBasis = 0;
           });
-             const width = document.querySelector(".tabs-swiper").offsetWidth;
-          alert(".tabs-swiper" + width);
-          const width1 = document.querySelector(".tabs-body").offsetWidth;
-          alert(".tabs-body" + width1);
-          const width2 = document.querySelector(".tabs-nav").offsetWidth;
-          alert(".tabs-nav" + width2);
-          const width3 = document.querySelector(".tabs-header").offsetWidth;
-          alert(".tabs-header" + width3);
         }
 
         // 初始化标签导航的 Swiper
         const tabsSwiper = new Swiper(".tabs-swiper", {
           direction: "horizontal",
-          freeMode: true,
+          freeMode: false,
           touchRatio: 1,
           slidesPerView: "auto",
           spaceBetween: 10, // 设置标签之间的间距
