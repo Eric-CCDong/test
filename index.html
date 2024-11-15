@@ -182,7 +182,7 @@
           const tabWidth = Math.floor(containerWidth / tabCount) - 20; // 减去padding的宽度
           alert("tabWidth:" + tabWidth);
           tabItems.forEach((item) => {
-            item.style.flexBasis = `${tabWidth}px`;
+            item.style.flexBasis = `${tabWidth}`;
           });
         }
 
@@ -226,7 +226,7 @@
         tabItems.forEach((item, index) => {
           item.addEventListener("click", function () {
             contentSwiper.slideTo(index, 300, false); // 300ms 动画时间
-            // tabsSwiper.slideTo(index, 300, false); // 300ms 动画时间
+            tabsSwiper.slideTo(index, 300, false); // 300ms 动画时间
           });
         });
 
