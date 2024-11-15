@@ -169,7 +169,6 @@
             window.innerWidth ||
             document.documentElement.clientWidth ||
             document.body.clientWidth;
-          alert(res);
           return res;
         }
 
@@ -180,9 +179,8 @@
             document.querySelector(".tabs-header").offsetWidth;
           const tabCount = tabItems.length;
           const tabWidth = Math.floor(containerWidth / tabCount) - 20; // 减去padding的宽度
-          alert("tabWidth:" + tabWidth);
           tabItems.forEach((item) => {
-            item.style.flexBasis = `${tabWidth}`;
+            item.style.flexBasis = 0;
           });
         }
 
