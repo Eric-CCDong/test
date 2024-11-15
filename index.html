@@ -106,7 +106,7 @@
       <div class="tabs-header">
         <div class="swiper-container tabs-swiper">
           <div class="swiper-wrapper tabs-nav" id="tabs-nav">
-            <div class="swiper-slide tab-item active" data-index="0">Tab 1.2</div>
+            <div class="swiper-slide tab-item active" data-index="0">Tab 1</div>
             <div class="swiper-slide tab-item" data-index="1">Tab 2</div>
             <div class="swiper-slide tab-item" data-index="2">Tab 3</div>
             <div class="swiper-slide tab-item" data-index="3">Tab 4</div>
@@ -156,8 +156,8 @@
         </div>
       </div>
     </div>
-    <script src="./polyfill.js"></script>
-    <script src="./swiper-bundle.min.js"></script>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const tabItems = document.querySelectorAll(".tab-item");
@@ -188,14 +188,14 @@
         // 初始化标签导航的 Swiper
         const tabsSwiper = new Swiper(".tabs-swiper", {
           direction: "horizontal",
-          freeMode: true,
+          freeMode: false,
           touchRatio: 1,
-          slidesPerView: "auto",
+          slidesPerView: 4,
           spaceBetween: 10, // 设置标签之间的间距
           centeredSlides: true, // 使选中的Tab居中
-          centeredSlidesBounds: true, // 允许边界处停止
-          slidesOffsetBefore: 0, // 使第一个Tab紧贴左边
-          slidesOffsetAfter: 0, // 使最后一个Tab紧贴右边
+          // centeredSlidesBounds: true, // 允许边界处停止
+          slidesOffsetBefore: 10, // 使第一个Tab紧贴左边
+          slidesOffsetAfter: 10, // 使最后一个Tab紧s贴右边
           observer: true,
           observeParents: true,
         });
