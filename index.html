@@ -116,7 +116,7 @@
             <div class="swiper-slide tab-item" data-index="6">Tab 7</div>
             <div class="swiper-slide tab-item" data-index="7">Tab 8</div>
             <div class="swiper-slide tab-item" data-index="8">Tab 9</div>
-            <div class="swiper-slide tab-item" data-index="9">Tab 10</div>
+            <div class="swiper-slide tab-item" data-index="9">Tab 10.1</div>
           </div>
         </div>
       </div>
@@ -151,7 +151,7 @@
               <p>Content for Tab 9</p>
             </div>
             <div class="swiper-slide" data-index="9">
-              <p>Content for Tab 10.1</p>
+              <p>Content for Tab 10</p>
             </div>
           </div>
         </div>
@@ -165,11 +165,12 @@
 
         // 获取屏幕宽度
         function getScreenWidth() {
-          return (
+          const res =
             window.innerWidth ||
             document.documentElement.clientWidth ||
-            document.body.clientWidth
-          );
+            document.body.clientWidth;
+          alert(res);
+          return res;
         }
 
         // 计算并设置每个Tab的flex-basis
@@ -179,6 +180,7 @@
             document.querySelector(".tabs-header").offsetWidth;
           const tabCount = tabItems.length;
           const tabWidth = Math.floor(containerWidth / tabCount) - 20; // 减去padding的宽度
+          alert("tabWidth:" + tabWidth);
           tabItems.forEach((item) => {
             item.style.flexBasis = `${tabWidth}px`;
           });
