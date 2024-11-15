@@ -197,6 +197,21 @@
           slidesOffsetAfter: 10, // 使最后一个Tab紧贴右边
           observer: true,
           observeParents: true,
+          breakpoints: {
+            // 你可以根据屏幕宽度设置不同的断点
+            300: {
+              slidesPerView: 3, // 小于或等于350px的设备上显示3个标签
+            },
+            768: {
+              slidesPerView: 5, // 大于350px小于768px的设备上显示5个标签
+            },
+            1024: {
+              slidesPerView: 7, // 大于768px小于1024px的设备上显示7个标签
+            },
+            1200: {
+              slidesPerView: "auto", // 大于1024px的设备上自动适应
+            }
+          }
         });
 
         // 初始化内容区域的 Swiper
