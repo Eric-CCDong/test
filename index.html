@@ -88,6 +88,7 @@
       .swiper-container {
         width: 100%;
         height: 100%;
+        overflow: hidden;
       }
 
       .swiper-slide {
@@ -187,7 +188,7 @@
         // 初始化标签导航的 Swiper
         const tabsSwiper = new Swiper(".tabs-swiper", {
           direction: "horizontal",
-          freeMode: false,
+          freeMode: true,
           touchRatio: 1,
           slidesPerView: "auto",
           spaceBetween: 10, // 设置标签之间的间距
